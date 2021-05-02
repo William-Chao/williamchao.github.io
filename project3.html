@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Project 3</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="project3.html" class="logo">Project 3</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="project1.html">Project 1</a></li>
+							<li><a href="project2.html">Project 2</a></li>
+							<li class="active"><a href="project3.html">Project 3</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Impact of Trade War on Domestic Economy</h1>
+								</header>
+								<div class="image main"><img src="images/MLDA.jpg" alt="" /></div>
+								<p>The minimum legal drinking age (MLDA) has been a topic of hot contention amongst students, lawmakers, and academics. 
+									The current MLDA is set at 21, and it is illegal for minors, those below 21, to purchase alcohol. 
+									A growing support for lowering the MLDA to 18 has re-emerged in recent years, especially amongst college students. 
+									People petitioning to lower the minimum drinking age hypothesizes the ineffectiveness of MLDA at decreasing alcohol consumption and 
+									argues for the fact that MLDA is the only age restriction that is set at 21, citing examples such as Voting Eligibility and 
+									Minimum Age for Serving the United States Armed Forces, which are both set to 18 . 
+									Changes to MLDA will not only change the amount of alcohol consumption and alcohol related vehicle fatalities in minors, 
+									but it would also affect the overall economy. The decrease in MLDA would lead to an increase in alcohol consumption, 
+									increased alcohol consumption could bring about changes in alcohol related taxes, which would bring changes in government revenue. </p>
+								<p>In order to find out the effect of MLDA on alcohol consumption, I collected traffic accident data from 1975 to 1983. 
+									These traffic accidents are then categorized under different causes, which includes drunk driving.
+									 The dataset includes over 28 thousand observations over an eight-year period, which is large enough to provide a good sample for my models.</p>
+								<p>I first implemented regular Ordinary Least Squared model to analyze the impact of the policy on alcohol related vehicle accidents. 
+									Although this does not directly measure the impact of 21-MLDA on alcohol consumption, 
+									the effect on alcohol related vehicle accidents should provide insights to changes in alcohol consumption. 
+									By setting drunk driving as the dependent variable and using year and policy as independent variables,
+									 I find that the amount of alcohol related vehicular accidents were increasing each year and that the 21 MLDA policy decreased 
+									 the probability of drunk driving by seven percent. Although the regression analysis has proven the relationship between policy 
+									 implementation and drunk driving, it does not accurate capture the magnitude of the impact as it does not account for the underlying 
+									 trend in drunk driving. Therefore, I employed difference-in-difference model to better examine the effectiveness of the policy. 
+									 By examining states that had implemented the change in comparison to states that remained the same, I was able to eliminate any 
+									 underlying trend for alcohol consumption. For this reason, I will be using New York and New Jersey to estimate the impact of the policy 
+									 as New Jersey increased MLDA to 21 in 1983 while MLDA in New York remained at 18 till 1985. New York and New Jersey are good samples to
+									  study as they have similar characteristics in population due to their proximity to one another. 
+									  The data that will be used for this research paper will be collected from 1975 to 1983. Alcohol related vehicular deaths will the 
+									  dependent variable. The control group is New York, and the treatment group will be New Jersey. The time variable will be 1983 as 
+									  we want to see the differences between before and after the implementation of the policy. 
+									  Finally, the effect of the MLDA will be captured in beta 3, where the differences between the treatment group from before 1983 and 
+									  after 1983 are compared to the differences between the control group from before and after 1983. </p>
+								
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">williamzite@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
