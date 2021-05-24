@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>R Code</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="project3 code.html" class="logo">Project Code</a>
+					</header>
+				
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="project1.html">Project 1</a></li>
+							<li><a href="project2.html">Project 2</a></li>
+							<li><a href="project3.html">Project 3</a></li>
+							<li class="active"><a href="project3.html">Project 3</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Analysis of Effectiveness of MLDA</h1>
+								</header>
+								<div class="image main"><img src="images/code.png" alt="" /></div>
+								<p>The data on traffic accidents are collected from Fatality Analysis Reporting System, 
+									which is created by the National Highway Traffic Safety Administration. 
+									The dataset contains fatal accidents as well as the causes of them for all fifty states from 1975 to 1983.
+									Only the state of New York and New Jersey are included in the dataset; 
+									furthermore, I will only be looking at the column for drunk driving. 
+									Drunk driving will serve as a measurement for alcohol consumption as consumption data was not obtainable and 
+									could easily be manipulated intentionally and unintentionally. 
+									Drunk driving equals one if the individual had a police-reported alcohol involvement or a positive alcohol test result. 
+									In addition to records of accidents, I have also gathered population data using Federal Reserve Economic Database (FRED) for 
+									both states from 1900s. They were then trimmed to match the time range of traffic accident report data.  
+									<a class="image fit"><img src="images/Project 3 raw.png" alt="" style = "width:600px; height:600px" /></a>
+									<button onclick="myFunction()">Hide/Show Code</button>
+									<div id="myDIV">
+										<img src="images/Project 3 code 1.png" alt="" height = "200" width = "700" vertical-align = "middle"/>
+									</div>	
+									<script>
+										function myFunction() {
+										 var x = document.getElementById("myDIV");
+										 if (x.style.display === "none") {
+											x.style.display = "block";
+										} else {
+											x.style.display = "none";
+										}
+									}
+									</script>
+								</p>
+								<p>However, the dataset downloaded are created on an annual basis. Therefore, I combined all of the annual data into on large dataset.
+									In addition, unnecessary columns and states were excluded to simply the dataset. Furthermore,
+									 population data are later added to match the year and state of each observation.
+									<a class="image fit"><img src="images/Project 3 Head.png" alt="" style = "width:500px; height:200px"/></a>
+									<button onclick="myFunction2()">Hide/Show Code</button>
+									<div id="myDIV2">
+										<img src="images/Project 3 code 2.png" alt="" height = "500" width = "700" vertical-align = "middle"/>
+									</div>	
+									<script>
+										function myFunction2() {
+										  var x = document.getElementById("myDIV2");
+										  if (x.style.display === "none") {
+											x.style.display = "block";
+										  } else {
+											x.style.display = "none";
+										  }
+										}
+									</script>
+								</p>
+								<p> The fixed effect model in conjunction with difference-in-difference model shows the impact of MLDA on drunk driving while
+									fixing for differences in years as well as populations. The variable we are interested in is "TreatAfter", as it captures the 
+									impact of MLDA. As we can see in the picture below, the coefficient for "TreatAfter" is -0.12, suggesting 21-MLDA decreased drunk
+									driving fatalities by 12 percent. The asterisk symbols at the right side shows that the impact is statistically significant.
+								</p>
+								<p> In addition to finding the impact of MLDA on drunk driving fatalities, difference-in-difference model also finds the differences between
+									the control and treatment group before and after treatment. I find that New Jersey had a higher number of drunk driving accidents. 
+									The coefficient for treatment variable is 0.21, suggesting New Jersey had 21 percent more drunk driving accidents than New York. 
+									The percentage of drunk driving accidents can be found under the intercept of the model, which is 0.056, suggesting over 5 percent of 
+									the accidents in New York are caused by drunk driving before 1983. On the other hand, the percentage of drunk driving for New Jersey 
+									prior to 1983 is over 25 percent. The next variable is the time variable, which measure the differences in the number of drunk driving
+									 accidents between 1983 and the years before. The coefficient for time variable is 0.258, suggesting the number of drunk driving 
+									 accidents increased by 25.7 percent in 1983. In order to interpret the percent of accidents caused by drunk driving for New York in 1983, 
+									 coefficient of the time variable needed be added to the intercept, which shows over 30 percent of the accidents are caused by drunk driving. 
+									<a class="image fit"><img src="images/Project 3 regression.png" alt="" style = "width:600px; height:750px"/></a>
+									<button onclick="myFunction3()">Hide/Show Code</button>
+									<div id="myDIV3">
+										<img src="images/Project 3, regression code.png" alt="" height = "150" width = "700" vertical-align = "middle"/>
+									</div>	
+									<script>
+										function myFunction3() {
+										  var x = document.getElementById("myDIV3");
+										  if (x.style.display === "none") {
+											x.style.display = "block";
+										  } else {
+											x.style.display = "none";
+										  }
+										}
+									</script>
+								</p>
+								<header class="major">
+									<a href="project3.html" style="font-size:30px" class="logo"><strong>Project Description</strong> </a>
+								</header>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">williamzite@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
